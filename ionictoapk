@@ -1,0 +1,21 @@
+Estas son las rutas en las que tengo yo instalado el jdk de java y el sdk de android:
+
+C:\Program Files\Java\jdk1.8.0_191\bin
+
+C:\Users\vuestro-usuario\AppData\Local\Android\Sdk\build-tools\28.0.3
+
+Generar y firmar la APK
+
+Nos dirigimos desde la consola a la ruta de nuestro proyecto y utilizaremos el siguiente comando:
+
+ionic cordova build --release android
+
+keytool -genkey -v -keystore ejemplo.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+
+Una vez creada, firmaremos con ella nuestra apk, para ello utilizaremos el siguiente comando:
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore ejemplo.keystore app-release-unsigned.apk alias_name
+
+Una vez hecho esto, solo nos queda optimizar nuestra apk firmada y ponerle un nombre:
+
+zipalign -v 4 app-release-unsigned.apk ejemplo.apk
