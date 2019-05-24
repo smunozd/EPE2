@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>
+      Portada
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card">
+      <ion-img src="https://media.giphy.com/media/W2t2vdTS3SZ0c/giphy.gif"></ion-img>
+      <ion-card-header>
+        <ion-card-subtitle>SMCL Inicio</ion-card-subtitle>
+        <ion-card-title>Bienvenido a "Dungeon's Game"</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Aplicacion especializada y configurable de juegos de PC, XBox, PS4 y PSVita.</p>
+        <p>Noticias, Imagenes, Videos, Reseñas y más...</p>
+      </ion-card-content>
+    </ion-card>
+    <ion-list>
+      <ion-item *ngFor="let data of rssDataArray.items">
+      <h2>{{data.title}}</h2>
+      <p [innerHtml]="data.description"></p>
+      <button ion-button clear item-end>Ver</button>
+      </ion-item>
+      </ion-list>
+</ion-content>

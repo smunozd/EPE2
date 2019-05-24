@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>
+      Noticias
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor='let data of rssDataArray.items'>
+    <p>{{data.title}}</p>
+    <!-- <p>{{data.guid}}</p> -->
+     <!-- <p> {{data.link}}</p> -->
+    <p><ion-thumbnail>
+      <img src={{data.thumbnail}}>
+    </ion-thumbnail></p>
+    <!-- <button ion-button clear item-end (click)=test2()>ver</button> -->
+    <button ion-button clear item-end (click)='abreModal()'>ver</button>
+    
+    </ion-item>
+    </ion-list>
+    <ion-item>
+      <ion-label>Actualizar RSS</ion-label>
+        <ion-toggle
+        color="success" (click)="test()"></ion-toggle>
+    </ion-item>
+    <!-- <ion-button (click)="test()">test</ion-button> -->
+</ion-content>
