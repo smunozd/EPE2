@@ -1,0 +1,6 @@
+import { Component } from '@angular/core';
+import { RssService } from 'src/app/rss.service';
+import {ModalController, NavController} from '@ionic/angular';
+import { ModalPagePage } from '../modal-page/modal-page.page';
+import {ActivatedRoute} from '@angular/router';
+import { ActionSheetController } from '@ionic/angular';
