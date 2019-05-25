@@ -1,0 +1,4 @@
+<ion-label>Actualizar RSS</ion-label>
+        <ion-toggle
+        color="success" (click)="test()"></ion-toggle>
+    </ion-item>
