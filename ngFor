@@ -1,0 +1,9 @@
+<ion-item *ngFor='let data of rssDataArray.items'>
+        <p>{{data.title}}</p>
+        <!-- <p>{{data.guid}}</p> -->
+         <!-- <p> {{data.link}}</p> -->
+        <p><ion-thumbnail>
+          <img src={{data.thumbnail}}>
+        </ion-thumbnail></p>
+        <!-- <button ion-button clear item-end (click)=test2()>ver</button> -->
+        <button ion-button clear item-end (click)='abreModal()'>ver</button>
